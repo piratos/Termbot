@@ -44,3 +44,11 @@ flask run --host=0.0.0.0  --port=<port>
 * Select the following events: `messages`, `messaging_postbacks`, `messaging_optins`, `message_deliveries`, `message_reads`.
 * Subscribe your page to these events.
 * You should be ready to send commands through messenger.
+
+
+## TODO
+- [x] Add a working script.
+- [x] Add Installation tutorial in readme.
+- [ ] Add a test suite and a CI maybe ?.
+- [ ] Add messenger buttons feature.
+- [ ] Add notification (Celery ?).
