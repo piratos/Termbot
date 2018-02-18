@@ -4,10 +4,10 @@ import subprocess, requests, json
 
 
 # Credentials from facebook app
-TOKEN = 'EAAC18pJ4W5ABAAEHxkPaZCvR0ajFOmykn2185tE9NCLOAJxl3ODrCaTn4TBVt9diLxLXoTjcEUZAspH9QOKQrx0VoCEYZCTk2rgH6EUIZCkGyw3lBjZCGW1zxojg18Bjqg11eGzpr94XAuMrS91wjt7aCXcc4V6t6sHc5uqZCyMwZDZD'   # page token to send msgs
-SECRET = 'termbotsecret'  # fb app secret to authenticate the app
-CHATID = ''  # chat id TODO: add users
-SECURL = 'supersecreturl'  # keep this url secret so no one flood your app
+TOKEN = '' # page token to send msgs
+SECRET = '' # fb app secret to authenticate the app
+CHATID = '' # chat id TODO: add users
+SECURL = ''  # keep this url secret so no one flood your app
 
 
 def post_facebook_message(fbid, response, pagetoken):
