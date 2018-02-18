@@ -30,7 +30,7 @@ If you intend to send a lot of requests to your bot use Lets encrypt+web server 
   * Add a secret string in `SECRET` for your authentication process with Facebook server.
   * `SECURL` is a string that will be added to the callback url keep it secret and Random maybe.
 
-### Run your flask application trough
+### Run your flask application through
 ```
 export FLASK_APP=app.py
 flask run --host=0.0.0.0  --port=<port>
@@ -41,4 +41,6 @@ flask run --host=0.0.0.0  --port=<port>
 * Choose your application and go to webhooks.
 * The callback should be `https://XXXXX.ngrock.io/fb/<SECURL>`.
 * Put the `SECRET` in the next field .
-* Submit and you should be ready to send commands through messenger.
+* Select the following events: `messages`, `messaging_postbacks`, `messaging_optins`, `message_deliveries`, `message_reads`.
+* Subscribe your page to these events.
+* You should be ready to send commands through messenger.
