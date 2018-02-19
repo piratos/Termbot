@@ -1,6 +1,9 @@
 from flask import Flask, request
 
-import subprocess, requests, json
+import subprocess
+import requests
+import json
+import time
 
 
 # Credentials from facebook app
@@ -46,6 +49,14 @@ def answer_command(cmd):
     for line in process.stdout:
         if line:
             result.append(line.decode('utf-8'))
+    # give the process a delay of 5s then kill
+    wait_time = 5
+    while process.poll() is None and (wait_time > 0):
+        time.sleep(0.5)
+        wait_time -= 1
+    # close the iobuffer andkill process if still alive
+    process.stdout.close()
+    process.kill()
     return '\n'.join(result)
 
 
@@ -65,7 +76,7 @@ def handle_msg():
 
     # else it is a post read the message and answer
     # load the body in json
-    incoming_message = request.get_json()
+    incoming_message = request.get_json(force=True)
     app.logger.debug('[+] Icoming msg: %s' % incoming_message)
     for entry in incoming_message['entry']:
         if not 'messaging' in entry:
@@ -80,4 +91,3 @@ def handle_msg():
                 answer = answer_command(message['message']['text']) 
                 post_facebook_message(message['sender']['id'], answer, TOKEN)
     return 'Done.'
-
