@@ -32,7 +32,7 @@ If you intend to send a lot of requests to your bot use Lets encrypt+web server 
 
 ### Run your flask application through
 ```
-export FLASK_APP=app.py
+export FLASK_APP=termbot.py
 flask run --host=0.0.0.0  --port=<port>
 ```
 
