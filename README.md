@@ -53,6 +53,6 @@ flask run --host=0.0.0.0  --port=<port>
 ## TODO
 - [x] Add a working script.
 - [x] Add Installation tutorial in readme.
-- [ ] Add a test suite and a CI maybe ?.
+- [x] Add a test suite and a CI maybe ?.
 - [ ] Add messenger buttons feature.
 - [ ] Add notification (Celery ?).
