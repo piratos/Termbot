@@ -3,7 +3,7 @@ Use facebook messenger app as a simple on-the-fly terminal for your server
 
 [![Build Status](https://travis-ci.org/piratos/Termbot.svg?branch=master)](https://travis-ci.org/piratos/Termbot)
 
-[![Coverage Status](https://coveralls.io/repos/github/piratos/Termbot/badge.svg)](https://coveralls.io/github/piratos/Termbot)
+[![Coverage Status](https://coveralls.io/repos/github/piratos/Termbot/badge.svg?service=github)](https://coveralls.io/github/piratos/Termbot)
 
 ## Installation
 
